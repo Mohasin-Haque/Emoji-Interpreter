@@ -22,17 +22,20 @@ var emojiDictionary = {
 var emojiWeKnow = Object.keys(emojiDictionary);
 
 export default function App() {
-  const [meaning, setMeaning] = useState("");
+  const [emoji, setEmoji] = useState("");
+  const [meaning, setMeaning] = useState(
+    "Emoji meaning present in our databse will show here.."
+  );
 
   function emojiInputHandler(event) {
     var userInput = event.target.value;
-
+    setEmoji(userInput);
     var meaning = emojiDictionary[userInput];
     // key inside object
-    // if(inputEmoji in dictionary)
-    // if (meaning === undefined) {
-    //   meaning = "Oops! Something went wrong.";
-    // }
+    // if(userInput in emojiDictionary)
+    if (meaning === undefined) {
+      meaning = "Oops! Something went wrong. Try a diiferent Emoji.";
+    }
     // console.log(meaning)
     setMeaning(meaning);
   }
@@ -65,10 +68,6 @@ export default function App() {
           </span>
         );
       })}
-
-      <div id="footer">
-        <p> Made with ❤️ by Mohasin. </p>
-      </div>
     </div>
   );
 }

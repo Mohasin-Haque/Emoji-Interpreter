@@ -1,3 +1,5 @@
 # Emoji-Interpreter
-Created with CodeSandbox
-Are you using emojis and dont know there meaning.. you are at right place. Just click on the emoji to know there meaning. 
+This aap will tell you the meanings of emoji..
+
+<--- HOW TO USE ---->
+Click or input the emoji to know the meaning.
