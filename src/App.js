@@ -3,33 +3,33 @@ import "./styles.css";
 
 var emojiDictionary = {
   "😊": "Smiling Face with Smiling Eyes",
+  "🤩": "Star-Struck",
   "🙂": "Slightly Smiling Face",
   "😇": "Smiling Face with Hallo",
-  "😉": "Winking Face",
+  "🥵": "Hot Face",
   "🥰": "Smiling Face with Hearts",
-  "😍": "Smiling Face with Heart-Eyes",
+  "😔": "sad",
+  "😗": "Kissing Face",
   "😂": "Face with Tears of Joy",
-  "😅": "Grinning Face with Sweat",
-  "😆": "Grinning Squinting Face",
+  "❤️": "love",
   "😃": "Grinning Face with Big Eyes",
-  "😄": "Grinning Face with Smiling Eyes",
+  "😳": "disbelief",
   "😁": "Beaming Face with Smiling Eyes",
-  "🙃": "Upside-Down Face",
   "😲": "Astonished Face",
-  "🧐": "Face with Monocle"
+  "😑": "annoyance"
 };
 
 var emojiWeKnow = Object.keys(emojiDictionary);
 
 export default function App() {
-  const [emoji, setEmoji] = useState("");
+  // const [emoji, setEmoji] = useState("");
   const [meaning, setMeaning] = useState(
     "Emoji meaning present in our databse will show here.."
   );
 
   function emojiInputHandler(event) {
     var userInput = event.target.value;
-    setEmoji(userInput);
+    // setEmoji(userInput);
     var meaning = emojiDictionary[userInput];
     // key inside object
     // if(userInput in emojiDictionary)
